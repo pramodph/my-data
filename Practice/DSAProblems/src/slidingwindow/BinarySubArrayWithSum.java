@@ -24,6 +24,6 @@ public class BinarySubArrayWithSum {
 		return count;
 		
 	}
-	//TC-O(n2) and SC-O(n)
+	//TC-O(n2) and SC-O(n)..
 
 }
