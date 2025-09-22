@@ -1,0 +1,10 @@
+package gsquestions;
+
+public class FindNonRepetingChar {
+
+	public static void main(String[] args) {
+		String str="swiss";
+		int k=2;
+	}
+
+}

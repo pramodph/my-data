@@ -1,0 +1,21 @@
+package gsquestions;
+
+public class EncodeString {
+
+	public static void main(String[] args) {
+		String str="ABCABCE";
+		minEncodingLength(str);
+	}
+
+	private static int minEncodingLength(String s) {
+		int i=0;
+		while(i<s.length()) {
+			int maxLen=0;
+			for(int len=1;len<=i && i+len<=s.length();len++) {
+				String prev=s.substring(i-len,i);
+				String next=s.substring(i+len,i);
+			}
+		}
+	}
+
+}

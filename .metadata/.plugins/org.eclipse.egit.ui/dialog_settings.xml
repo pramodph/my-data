@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="EGit.KnownHosts">
+		<item value="bitbucket.org"/>
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/pramodph/CodeCollections.git"/>
+	</list>
+	<list key="CommitDialog.authorValues">
+		<item value="pramod.h &lt;pramod.h@localhost&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="pramod.h &lt;pramod.h@localhost&gt;"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="/Users/pramod.h/git/repository/.git">
+			<item value="false"/>
+			<item value="pramod.h"/>
+			<item value="DSA Problems"/>
+			<item value="pramod.h"/>
+			<item value="0000000000000000000000000000000000000000"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+		<list key="/Users/pramod.h/git/repository1/.git">
+			<item value="false"/>
+			<item value="pramod.h &lt;pramod.h@localhost&gt;"/>
+			<item value="Test commit"/>
+			<item value="pramod.h &lt;pramod.h@localhost&gt;"/>
+			<item value="85a16560a1b3d5598d03c6717180ce856e86f38f"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+		<list key="/Users/pramod.h/git/CodeCollections/.git">
+			<item value="false"/>
+			<item value="pramod.h &lt;pramod.h@localhost&gt;"/>
+			<item value="Test commit"/>
+			<item value="pramod.h &lt;pramod.h@localhost&gt;"/>
+			<item value="0000000000000000000000000000000000000000"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="410"/>
+		<item key="DIALOG_Y_ORIGIN" value="130"/>
+		<item key="DIALOG_WIDTH" value="650"/>
+		<item key="DIALOG_HEIGHT" value="445"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+		<list key="sashWeights">
+			<item value="600"/>
+			<item value="400"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,27 @@
+package gsquestions;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PrimeFactorisation {
+
+	public static void main(String[] args) {
+		int x=60;
+		List<Integer>res=findPrimeFactors(x);
+		System.out.println(res);
+		
+	}
+
+	private static List<Integer> findPrimeFactors(int x) {
+		List<Integer>lst=new ArrayList<>();
+		for(int i=2;i<x;i++) {
+			while(x%i==0) {
+				lst.add(i);
+				x=x/10;
+			}
+		}
+		if(x>1) lst.add(x);
+		return lst;
+	}
+
+}

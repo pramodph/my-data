@@ -1,0 +1,15 @@
+package gsquestions;
+
+public class SecondSmallestElement {
+
+	public static void main(String[] args) {
+		int[] nums= {2,1,0,3};
+		System.out.println(findSecondSmallest(nums));
+	}
+
+	private static int findSecondSmallest(int[] nums) {
+		int smallestNum=Integer.MAX_VALUE;
+		int secondSmallest=Integer.MIN_VALUE;
+	}
+
+}

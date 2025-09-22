@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;SpringException-1&apos; to &apos;paginationandsorting&apos;&#x0A;- Original element: &apos;SpringException-1&apos;&#x0A;- Renamed element: &apos;SpringException-1&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;SpringException-1&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=SpringException-1" name="paginationandsorting" references="true" stamp="1757593460908" version="1.0"/>
+</session>

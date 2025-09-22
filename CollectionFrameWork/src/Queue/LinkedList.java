@@ -1,0 +1,50 @@
+package Queue;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Queue;
+
+
+
+public class LinkedList {
+
+	public static void main(String[] args) {
+		Queue<Integer> queue = new java.util.LinkedList<>();
+		List<Integer> lst=Arrays.asList(5,6,7,8);
+		
+		queue.add(1);
+		queue.add(2);
+		queue.add(3);
+		
+		
+		System.out.println(queue.size());
+		System.out.println(queue.isEmpty());
+		System.out.println(queue.add(null));
+		System.out.println(queue.addAll(lst));
+		System.out.println(queue.remove(null));
+		System.out.println(queue.removeAll(lst));
+		System.out.println(queue);
+		System.out.println(Arrays.toString(queue.toArray()));
+		System.out.println(queue.hashCode());
+		queue.clear();
+		System.out.println(queue.addAll(lst));
+		
+		//QueSpecific methods
+		System.out.println(queue.peek());
+		System.out.println(queue.add(1));
+		System.out.println(queue.offer(2));
+		queue.clear();
+		System.out.println(queue);
+		System.out.println(queue.poll());
+		System.out.println(queue.remove());
+
+	}
+
+}
+
+/*
+In the Java Collection Framework, a Queue is a data structure that follows the 
+FIFO (First In, First Out) principle. It is part of the java.util package and 
+is implemented by classes like LinkedList, PriorityQueue, and ArrayDeque.
+
+*/

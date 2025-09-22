@@ -1,0 +1,24 @@
+package multiThreadingDemos;
+
+class MyThread extends Thread{
+	public void run(){
+		for(int i=0;i<=10;i++) {
+			System.out.println("Check Priority->"+Thread.currentThread().getPriority()+" Name->"+Thread.currentThread().getName());
+		}
+	}
+}
+public class Demo02 {
+
+	public static void main(String[] args) {
+		MyThread t=new MyThread();
+		//t.setPriority(10);
+		t.start();
+		System.out.println("Setting Priority:");
+		Thread.currentThread().setName("RajaHuli");
+		//Main thread
+		for(int i=0;i<=10;i++) {
+			System.out.println("Main Thread  ->"+ Thread.currentThread().getPriority()+"Name->"+Thread.currentThread().getName());
+		}
+	}
+
+}

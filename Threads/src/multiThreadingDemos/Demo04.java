@@ -1,0 +1,33 @@
+package multiThreadingDemos;
+class MyThread2 extends Thread{
+	static Thread mt;
+	public void run() {
+			try {
+				mt.join();
+			} catch (InterruptedException e) {
+				for(int i=0;i<=10;i++) {
+					System.out.println("Child thread");
+				}
+				e.printStackTrace();
+			}
+	}
+	
+}
+public class Demo04 {
+
+	public static void main(String[] args) throws InterruptedException {
+		MyThread2.mt=Thread.currentThread();
+		MyThread2 t=new MyThread2();
+		t.start();
+		//t.join();
+		for(int i=0;i<=10;i++) {
+			System.out.println("Main Thread");
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

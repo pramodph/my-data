@@ -1,0 +1,38 @@
+package ksumSubArrays;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class subarraySumWithPosition {
+
+	public static void main(String[] args) {
+		int [] nums= {2,8,2,6,-6,3,2};
+		int k=5;
+		//System.out.println(checkSubArraySumEqualK(nums,k));
+		System.out.println(subarraySum(nums,k));
+	}
+	static ArrayList<Integer> subarraySum(int[] arr, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(0, -1); // Initialize with prefix sum 0 at index -1
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            int rem = sum - target;
+            if (map.containsKey(rem)) {
+                ArrayList<Integer> result = new ArrayList<>();
+                result.add(map.get(rem) + 2); // Convert to 1-based index
+                result.add(i + 1); // Convert to 1-based index
+                return result;
+            }
+            // Only add the current sum if it's not already in the map
+            // to ensure the leftmost subarray is considered
+            if (!map.containsKey(sum)) {
+                map.put(sum, i);
+            }
+        }
+        ArrayList<Integer> result = new ArrayList<>();
+        result.add(-1);
+        return result;
+    }
+
+}

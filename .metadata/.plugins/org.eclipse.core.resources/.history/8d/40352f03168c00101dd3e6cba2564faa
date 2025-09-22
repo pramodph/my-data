@@ -1,0 +1,22 @@
+package gsquestions;
+
+public class StringToNumberConversion {
+
+	public static void main(String[] args) {
+		String str="-42";
+		int result=0;
+		boolean isNeg=false;
+		if(str.charAt(0)=='-') {
+			isNeg=true;
+		}
+		for(char ch:str.toCharArray()) {
+			if(ch>='0' && ch<='9') {
+				result=result*10+(ch-'0');
+			}
+		}
+		System.out.println((isNeg)?-result:result);
+		System.out.println(Integer.parseInt(str));
+		
+	}
+
+}

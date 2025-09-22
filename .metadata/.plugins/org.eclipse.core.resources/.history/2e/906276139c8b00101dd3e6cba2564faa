@@ -1,0 +1,41 @@
+package gsquestions;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class DecimalConversion {
+
+	public static void main(String[] args) {
+		int numerator=1;
+		int denominator=6;
+		System.out.println(FractionalDecimal(numerator,numerator));
+	}
+
+	private static String FractionalDecimal(int num, int deno) {
+		StringBuilder result=new StringBuilder();
+		if((num<0)^(deno<0)) result.append("-");
+		long nume=Math.abs((long)num);
+		long den= Math.abs((long)deno);
+		result.append(nume/den);
+		nume%=10;
+		if(nume==0) return result.toString();
+		result.append(".");
+		Map<Long,Integer>remainderMap=new HashMap<>();
+		StringBuilder decimal=new StringBuilder();
+		while (nume != 0) {
+
+			if (remainderMap.containsKey(nume)) {
+				int start = remainderMap.get(nume);
+				decimal.insert(start, "(");
+				result.append(")");
+				break;
+			}
+			remainderMap.put(nume, remainderMap.size());
+			nume *= 10;
+			decimal.append(nume / den);
+			nume = nume % 10;
+		}
+		result.append(decimal);
+		return result.toString();	}
+
+}

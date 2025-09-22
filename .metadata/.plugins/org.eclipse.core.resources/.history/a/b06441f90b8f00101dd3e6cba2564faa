@@ -1,0 +1,21 @@
+package Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import MOdel.Employee;
+import Repository.EmployeeRepository;
+
+public class EmployeeService {
+	
+	
+	@Autowired
+	private EmployeeRepository employeeRepository;
+
+	public List<Employee> fetchAllEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

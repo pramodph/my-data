@@ -1,0 +1,24 @@
+package gsquestions;
+
+public class BuyAndSellStocks {
+
+	public static void main(String[] args) {
+		int[]arr= {150,10,0,30,14,90,120};
+		calculateMaxProfit(arr);
+	}
+
+	private static void calculateMaxProfit(int[] arr) {
+		int minValue=Integer.MAX_VALUE;
+		int maxProfit=0;
+		int sum=0;
+		for(int num:arr) {
+			if(num<minValue) {
+				minValue=num;
+			}else {
+				maxProfit=Math.max(maxProfit, num-minValue);
+			}
+		}
+		System.out.println(maxProfit);
+	}
+
+}

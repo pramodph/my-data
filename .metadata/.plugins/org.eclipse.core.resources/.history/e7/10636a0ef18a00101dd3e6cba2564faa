@@ -1,0 +1,11 @@
+package com.pakage.practice;
+
+public class TapWaterORSnow {
+
+	public static void main(String[] args) {
+		int [] heights= {5,3,0,1,4};
+		findWaterTapped(heights);
+	}
+	public static int findWaterTapped(int[] heights);
+
+}

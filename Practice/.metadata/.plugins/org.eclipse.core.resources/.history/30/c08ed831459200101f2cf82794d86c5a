@@ -1,0 +1,15 @@
+package ReadWriteLock;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+
+public class Main {
+
+	public static void main(String[] args) {
+		SharedResource resource =new SharedResource();
+		ReadWriteLock lock=new ReadWriteLock();
+			
+			
+	}
+
+}

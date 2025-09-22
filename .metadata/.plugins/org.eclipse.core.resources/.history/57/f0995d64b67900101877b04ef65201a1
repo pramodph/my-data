@@ -1,0 +1,66 @@
+package multiThreadingDemos;
+
+class ExThread01 extends Thread{
+	Display d;
+	String name;
+	public ExThread01(Display d, String name) {
+		this.d = d;
+		this.name = name;
+	}
+	
+	public void run() {
+		d.display();
+	}
+	
+	
+}
+
+class ExThread02 extends Thread{
+	Display d;
+	String name;
+	public ExThread02(Display d, String name) {
+		this.d = d;
+		this.name = name;
+	}
+	
+	public void run() {
+		d.display1();
+	}
+}
+
+class Display{
+	public void display() {
+		for(int i=0;i<=10;i++) {
+			System.out.println(i);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	public void display1() {
+		for(char ch='A';ch<='K';ch++) {
+			System.out.println(ch);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}
+public class Demo06 {
+
+	public static void main(String[] args) {
+		Display d=new Display();
+		ExThread01 t1=new ExThread01(d,"Dhoni");
+		ExThread02 t2=new ExThread02(d,"Virat");
+		t1.start();
+		t2.start();
+	}
+
+}

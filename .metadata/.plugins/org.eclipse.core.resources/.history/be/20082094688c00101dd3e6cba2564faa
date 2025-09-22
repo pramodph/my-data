@@ -1,0 +1,14 @@
+package gsquestions;
+
+public class EncodeString {
+
+	public static void main(String[] args) {
+		String str="ABCABCE";
+		minEncodingLength(str);
+	}
+
+	private static int minEncodingLength(String str) {
+		
+	}
+
+}

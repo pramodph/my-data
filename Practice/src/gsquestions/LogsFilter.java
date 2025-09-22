@@ -1,0 +1,40 @@
+package gsquestions;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class LogsFilter {
+
+	public static void main(String[] args) {
+		List<String>lst=Arrays.asList(
+				"10.0.0.1 -GET 2020-08-24",
+				"10.0.0.1 -GET 2020-08-24",
+				"10.0.0.1 -GET 2020-08-20",
+				"10.0.0.2 -GET 2020-08-24");
+		System.out.println(getMostFrequentIps(lst));
+				
+	}
+
+	private static String getMostFrequentIps(List<String> lst) {
+		Map<String,Integer>freqCount=new HashMap<>();
+		for(int i=0;i<lst.size();i++) {
+			String ip=lst.get(i).split(" ")[0];
+			freqCount.put(ip, freqCount.getOrDefault(ip, 0)+1);
+		}
+		int maxFreqCount=Collections.max(freqCount.values());
+		List<String> res=new ArrayList<>();
+		for(Map.Entry<String, Integer> mp:freqCount.entrySet()) {
+			if(mp.getValue()==maxFreqCount) {
+				res.add(mp.getKey());
+			}
+			
+		}
+		Collections.sort(res);
+		return String.join(",", res);
+	}
+
+}

@@ -1,0 +1,40 @@
+package gsquestions;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class FindAverageScoreFrom2DOptimal {
+
+	public static void main(String[] args) {
+		String[][] details= {
+				{"A","84"},
+				{"B","87"},
+				{"C","84"},
+				{"B","87"}
+		};
+		System.out.println(findHighestAverage(details));
+	}
+
+	private static int findHighestAverage(String[][] details) {
+		Map<String,List<Integer>>map=new HashMap<>();
+		for(String[] records:details) {
+			String name=records[0];
+			int marks=Integer.parseInt(records[1]);
+			map.computeIfAbsent(name, k->new ArrayList<>()).add(marks);
+		}
+		int maxAverage=Integer.MIN_VALUE;
+		int sum=0;
+		for(List<Integer>mark:map.values()) {
+			for(int mar:mark) {
+				sum=sum+mar;
+			}
+			int avg=sum/mark.size();
+			maxAverage=Math.max(maxAverage, avg);
+		}
+		
+		return maxAverage;
+	}
+
+}

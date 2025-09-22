@@ -1,0 +1,9 @@
+package gsquestions;
+
+public class FindMissingCharacter {
+
+	public static void main(String[] args) {
+		String sentance="The Quick brown fox jomps over the lazy dog"
+	}
+
+}

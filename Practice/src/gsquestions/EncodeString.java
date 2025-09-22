@@ -1,0 +1,35 @@
+package gsquestions;
+
+public class EncodeString {
+
+	public static void main(String[] args) {
+		String str="AAAABBBB";
+		System.out.println(minEncodingLength(str));
+	}
+
+	private static int minEncodingLength(String s) {
+		int i=0;
+		StringBuilder sb=new StringBuilder();
+		while(i<s.length()) {
+			int maxLen=0;
+			for(int len=1;len<=i && i+len<=s.length();len++) {
+				String prev=s.substring(i-len,i);
+				String next=s.substring(i,i+len);
+				if(prev.equals(next)) {
+					maxLen=len;
+				}
+			}
+			
+			if(maxLen>0) {
+				sb.append("*");
+				i=i+maxLen;
+			}else {
+				sb.append(s.charAt(i));
+				i++;
+			}
+		}
+		System.out.println(sb.toString());
+		return sb.length();
+	}
+
+}

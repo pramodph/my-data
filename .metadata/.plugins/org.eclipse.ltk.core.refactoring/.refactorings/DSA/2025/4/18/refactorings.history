@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;DSAProblems/src/Problems&apos;&#x0A;- Original project: &apos;DSA&apos;&#x0A;- Destination element: &apos;DSAProblems/src/Problems&apos;&#x0A;- Original elements:&#x0A;     dsa.practice.BinarySearch.java&#x0A;     dsa.practice.CountEvenOrOdd.java" description="Copy compilation units" destination="=DSAProblems/src&lt;Problems" element1="/src&lt;dsa.practice{BinarySearch.java" element2="/src&lt;dsa.practice{CountEvenOrOdd.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1745850166629" units="2" version="1.0"/>
+</session>

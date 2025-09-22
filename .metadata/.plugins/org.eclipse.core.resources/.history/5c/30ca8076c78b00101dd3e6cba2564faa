@@ -1,0 +1,16 @@
+package gsquestions;
+
+import java.util.List;
+
+public class FindMissingCharacter {
+
+	public static void main(String[] args) {
+		String sentance="The Quick brown fox jomps over the lazy dog";
+		List<Character>res =findMissingChar(sentance);
+	}
+
+	private static List<Character> findMissingChar(String sentance) {
+		String input=sentance.toLowerCase();
+	}
+
+}

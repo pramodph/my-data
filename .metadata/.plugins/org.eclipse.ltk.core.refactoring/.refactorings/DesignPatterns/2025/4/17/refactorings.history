@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;chainofresponsibility.pattern.ErrorLogProcessor&apos; to &apos;ErrorlogProcessor&apos;&#x0A;- Original project: &apos;DesignPatterns&apos;&#x0A;- Original element: &apos;chainofresponsibility.pattern.ErrorLogProcessor&apos;&#x0A;- Renamed element: &apos;chainofresponsibility.pattern.ErrorlogProcessor&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ErrorLogProcessor&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/&lt;chainofresponsibility.pattern{ErrorLogProcessor.java[ErrorLogProcessor" matchStrategy="1" name="ErrorlogProcessor" qualified="false" references="true" similarDeclarations="false" stamp="1745339778058" textual="false" version="1.0"/>
+</session>

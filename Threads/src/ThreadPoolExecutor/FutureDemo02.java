@@ -1,0 +1,40 @@
+package ThreadPoolExecutor;
+
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+
+public class FutureDemo02 {
+
+	public static void main(String[] args) {
+		java.util.concurrent.ThreadPoolExecutor poolExecutor=new java.util.concurrent.ThreadPoolExecutor(1, 1, 1, TimeUnit.HOURS, new ArrayBlockingQueue<>(10),
+				Executors.defaultThreadFactory(),new java.util.concurrent.ThreadPoolExecutor.AbortPolicy());
+		
+		Future<?> futureObj=poolExecutor.submit(()->{
+			try {
+				Thread.sleep(7000);
+				System.out.println("This is the task which tread will execute");
+			}catch(Exception e) {
+				
+			}
+		});
+		System.out.println("Is Task Done:"+futureObj.isDone());
+		
+		try {
+			futureObj.get(2,TimeUnit.SECONDS);
+		}catch(Exception e) {
+			System.out.println("Time out Exception");
+		}
+		
+		try {
+			futureObj.get();
+		}catch(Exception e) {
+			
+		}
+		
+		System.out.println("Is doen: "+futureObj.isDone());
+		System.out.println("Is Cancelled : "+futureObj.isCancelled());
+	}
+
+}

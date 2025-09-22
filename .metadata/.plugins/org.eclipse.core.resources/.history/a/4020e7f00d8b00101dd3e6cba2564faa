@@ -1,0 +1,9 @@
+package gsquestions;
+
+public class SortRAndG {
+
+	public static void main(String[] args) {
+		char [] arr= {'r','g','r','r','g','r'};
+	}
+
+}

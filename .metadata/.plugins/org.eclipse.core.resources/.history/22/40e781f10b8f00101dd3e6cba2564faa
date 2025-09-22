@@ -1,0 +1,7 @@
+package Repository;
+
+import org.springframework.data.jpa.repository.support.JpaRepositoryFactory;
+
+public class EmployeeRepository extends JpaRepositoryFactory{
+
+}

@@ -1,0 +1,9 @@
+
+package gsquestions;
+
+public class FindAverageScoreFrom2D {
+	public static void main(String[] args) {
+		String[][] details= {{"A","84"},{"B","84"},{"C","84"},{"B","87"}};
+	}
+
+}

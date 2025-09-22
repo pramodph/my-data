@@ -1,0 +1,22 @@
+package DemoStopResumeSuspend;
+
+public class Main {
+
+	public static void main(String[] args) {
+		SharedResource resource=new SharedResource();
+		System.out.println("Main Thread started");
+		Thread t1=new Thread(()->{
+			System.out.println("Thread 1 started calling produce mmethod");
+			resource.produce();
+		});
+		
+		Thread t2 = new Thread(() -> {
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+
+			}
+		});
+	}
+
+}

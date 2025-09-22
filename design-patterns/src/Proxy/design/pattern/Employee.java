@@ -1,0 +1,26 @@
+package Proxy.design.pattern;
+
+public class Employee {
+	String client;
+	int empId;
+	
+	public String getClient() {
+		return client;
+	}
+	public void setClient(String client) {
+		this.client = client;
+	}
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	
+	@Override
+	public String toString() {
+		return "Employee [client=" + client + ", empId=" + empId + "]";
+	}
+	
+	
+}

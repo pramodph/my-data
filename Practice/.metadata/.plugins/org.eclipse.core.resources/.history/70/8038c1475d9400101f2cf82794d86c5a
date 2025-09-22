@@ -1,0 +1,16 @@
+package ThreadPoolExecutor;
+
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.Executor;
+import java.util.concurrent.TimeUnit;
+
+public class FutureDemo01 {
+
+	public static void main(String[] args) {
+		java.util.concurrent.ThreadPoolExecutor poolExecutor =new java.util.concurrent.ThreadPoolExecutor(1,1,1,
+				TimeUnit.HOURS,new ArrayBlockingQueue<>(10),
+				Executor.DefaultThreadFactory(),
+				new ThreadPoolExecutor.AbortPolicy());
+	}
+
+}

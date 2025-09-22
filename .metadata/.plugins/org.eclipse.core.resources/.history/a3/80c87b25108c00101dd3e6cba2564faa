@@ -1,0 +1,10 @@
+package gsquestions;
+
+public class RoboticMovement {
+
+	public static void main(String[] args) {
+		String str="UUDDLRLRX123@!!#";
+		checkForMovement(str);
+	}
+
+}

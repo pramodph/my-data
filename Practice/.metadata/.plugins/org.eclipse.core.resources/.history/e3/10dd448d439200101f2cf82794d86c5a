@@ -1,0 +1,47 @@
+package DemoStopResumeSuspend;
+
+public class Main {
+
+	public static void main(String[] args) {
+		SharedResource resource=new SharedResource();
+		System.out.println("Main Thread started");
+		
+		Thread t1=new Thread(()->{
+			System.out.println("Thread 1 started calling produce mmethod");
+			resource.produce();
+		});
+		
+		Thread t2 = new Thread(() -> {
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			System.out.println("Thread 2 started calling the produce method");
+			resource.produce();
+		});
+		
+		t1.start();
+		t2.start();
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		t1.suspend();
+		System.out.println("Thread 1 is suspended:");
+		//t1.resume();
+		
+		try {
+			System.out.println("Main Thread wait fort the Thread 2 to finish ");
+			t2.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Main Thread finished the work");
+	}
+
+}

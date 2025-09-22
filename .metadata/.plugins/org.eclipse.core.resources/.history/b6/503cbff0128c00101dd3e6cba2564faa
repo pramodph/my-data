@@ -1,0 +1,28 @@
+package gsquestions;
+
+public class SecondSmallestElement {
+
+	public static void main(String[] args) {
+		int[] nums= {2,0,-1,3};
+		System.out.println(findSecondSmallest(nums));
+	}
+
+	private static int findSecondSmallest(int[] nums) {
+		int smallestNum=Integer.MAX_VALUE;
+		int secondSmallest=Integer.MIN_VALUE;
+		if(nums==null || nums.length<2) return 
+		for(int i=0;i<nums.length;i++) {
+			if(nums[i]<smallestNum) {
+				secondSmallest=smallestNum;
+				smallestNum=nums[i];
+			}else {
+				if(nums[i]>smallestNum && nums[i]<secondSmallest) {
+					secondSmallest=nums[i];
+				}
+			}
+			
+		}
+		return secondSmallest;
+	}
+
+}

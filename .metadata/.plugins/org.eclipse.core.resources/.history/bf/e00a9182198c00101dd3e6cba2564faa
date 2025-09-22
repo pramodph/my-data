@@ -1,0 +1,24 @@
+package gsquestions;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class LogsFilter {
+
+	public static void main(String[] args) {
+		List<String>lst=Arrays.asList(
+				"10.0.0.1 -GET 2020-08-24",
+				"10.0.0.1 -GET 2020-08-24",
+				"10.0.0.2 -GET 2020-08-20",
+				"10.0.0.3 -GET 2020-08-24");
+		System.out.println(getMostFrequentIps(lst));
+				
+	}
+
+	private static List<String> getMostFrequentIps(List<String> lst) {
+		for(int i=0;i<lst.size();i++) {
+			String ip=lst.get(i).split(" ")[0];
+		}
+	}
+
+}

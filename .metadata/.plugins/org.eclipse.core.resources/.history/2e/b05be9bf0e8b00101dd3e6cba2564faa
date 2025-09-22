@@ -1,0 +1,23 @@
+package gsquestions;
+
+public class SortRAndG {
+
+	public static void main(String[] args) {
+		char [] arr= {'r','g','r','r','g','r'};
+		sortArray(arr);
+	}
+
+	private static char[] sortArray(char[] arr) {
+		int left=0;
+		for(int right=0;right<arr.length;right++) {
+			char ch=arr[right];
+			if(ch=='r') {
+				char temp=arr[left];
+				arr[left]=arr[right];
+				arr[right]=temp;
+			}
+			
+		}
+	}
+
+}

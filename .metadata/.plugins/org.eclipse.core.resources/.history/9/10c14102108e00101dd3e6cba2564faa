@@ -1,0 +1,15 @@
+package Queue;
+
+/*
+ In the Java Collection Framework, a Queue is a data structure that follows the 
+ FIFO (First In, First Out) principle. It is part of the java.util package and 
+ is implemented by classes like LinkedList, PriorityQueue, and ArrayDeque.*/
+
+public class LinkedList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

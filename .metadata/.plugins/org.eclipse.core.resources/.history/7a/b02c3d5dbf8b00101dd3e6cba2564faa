@@ -1,0 +1,25 @@
+package gsquestions;
+
+public class CycleLengthFinder {
+
+	public static void main(String[] args) {
+		int[] nums= {3,2,0,4,2};
+		System.out.println(findCycleLength(nums));
+	}
+
+	private static int findCycleLength(int[] nums) {
+		int slow=0;
+		int fast=0;
+		while(true) {
+			if(fast>=nums.length || nums[fast]>=nums.length) return -1;
+			fast=nums[fast];
+			if(fast>=nums.length || nums[fast]>=nums.length) return -1;
+			fast=nums[fast];
+			
+			slow=nums[slow];
+			if(slow==fast) break;
+			
+		}
+	}
+
+}

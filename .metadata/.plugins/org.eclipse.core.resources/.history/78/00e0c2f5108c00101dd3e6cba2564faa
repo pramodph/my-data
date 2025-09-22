@@ -1,0 +1,24 @@
+package gsquestions;
+
+public class RoboticMovement {
+
+	public static void main(String[] args) {
+		String str="UUDDLRLRX123@!!#";
+		checkForMovement(str);
+	}
+
+	private static int[] checkForMovement(String str) {
+		if(str==null) return new int[] {0,0};
+		int x=0,y=0;
+		for(char ch:str.toCharArray()) {
+			switch(ch) {
+			  case 'U': y++;break;
+			  case 'D': y--;break;
+			  case 'L': x--;break;
+			  case 'R': x++;break;
+			}
+			return new int[] {x,y};
+		}
+	}
+
+}

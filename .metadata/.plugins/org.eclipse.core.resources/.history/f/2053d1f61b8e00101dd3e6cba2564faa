@@ -1,0 +1,53 @@
+package Queue;
+
+import java.util.Collections;
+import java.util.PriorityQueue;
+
+
+class Student {
+    private int id;
+    private String name;
+    private int age;
+
+    // Constructor
+    public Student(int id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getters
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public int getAge() { return age; }
+
+    // To display Student details
+    @Override
+    public String toString() {
+        return "Student{id=" + id + ", name=" + name + ", age=" + age + "}";
+    }
+}
+public class PriorityQueueDemo02 {
+
+	public static void main(String[] args) {
+		// Create a PriorityQueue with a custom comparator (Max-Heap)
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+
+        // Add elements
+        maxHeap.add(45);
+        maxHeap.add(10);
+        maxHeap.add(30);
+        maxHeap.add(20);
+        maxHeap.add(50);
+
+        // Print raw PriorityQueue (internal heap structure)
+        System.out.println("PriorityQueue (Max-Heap) internal structure: " + maxHeap);
+
+        // Retrieve values in descending order
+        System.out.println("Retrieving elements in descending order:");
+        while (!maxHeap.isEmpty()) {
+            System.out.println(maxHeap.poll());
+        }
+	}
+
+}

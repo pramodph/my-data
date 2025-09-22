@@ -1,0 +1,22 @@
+package multiThreadingDemos;
+
+class ExThread01 extends Thread{
+	Display d;
+	String name;
+}
+
+class ExThread02 extends Thread{
+	
+}
+
+class Display{
+	Str
+}
+public class Demo06 {
+
+	public static void main(String[] args) {
+		ExThread01 t1=new ExThread01();
+		ExThread02 t2=new ExThread02();
+	}
+
+}

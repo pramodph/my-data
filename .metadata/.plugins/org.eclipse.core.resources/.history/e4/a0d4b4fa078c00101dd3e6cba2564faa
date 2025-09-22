@@ -1,0 +1,11 @@
+package gsquestions;
+
+public class PowerOfTen {
+
+	public static void main(String[] args) {
+		int[] arr1= {2,55,61,66,462};
+		int[] arr2= {1,10,100,1000,10000};
+		System.out.println(checkPowerOfTen(arr1));
+	}
+
+}

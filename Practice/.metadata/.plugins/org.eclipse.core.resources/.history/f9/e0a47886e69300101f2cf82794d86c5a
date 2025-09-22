@@ -1,0 +1,21 @@
+package slidingwindow;
+
+public class OptimisedBinarySubArrayWithSum {
+
+	public static void main(String[] args) {
+		int[] nums = { 0, 0, 0, 0, 0 };
+		int k = 0;
+		System.out.println(numSubArrayWithSum(nums, k));
+	}
+
+	private static int numSubArrayWithSum(int[] nums, int k) {
+		int start = 0;
+		int n = nums.length;
+		int count = 0;
+		int sum=0;
+		for (int end = 0; end < n; end++) {
+			sum=sum+nums[end];
+			while()
+		}
+	}
+}

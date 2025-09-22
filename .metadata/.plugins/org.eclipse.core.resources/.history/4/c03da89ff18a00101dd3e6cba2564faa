@@ -1,0 +1,33 @@
+package com.pakage.practice;
+
+public class TapWaterORSnow {
+
+	public static void main(String[] args) {
+		int [] heights= {5,3,0,1,4};
+		findWaterTapped(heights);
+	}
+	public static int findWaterTapped(int[] heights) {
+		int left=0;
+		int right=heights.length-1;
+		int leftMax=0;
+		int rightMax=0;
+		int water=0;
+		while(left<right) {
+			if(heights[left]<heights[right]) {
+				if(heights[left]>=leftMax) {
+					leftMax=heights[left];
+				}else {
+					water=water+heights[left]-leftMax;
+				}
+			}else {
+				if(heights[right]>=rightMax) {
+					rightMax=heights[right];
+				}else {
+					water=water+heights[right]-rightMax;
+				}
+			}
+		}
+		return water;
+	}
+
+}

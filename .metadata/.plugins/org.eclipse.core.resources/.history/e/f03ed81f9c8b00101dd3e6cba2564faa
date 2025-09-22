@@ -1,0 +1,19 @@
+package gsquestions;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class DecimalConversion {
+
+	public static void main(String[] args) {
+		int numerator=1;
+		int denominator=6;
+		System.out.println(FractionalDecimal(numerator,numerator));
+	}
+
+	private static String FractionalDecimal(int nunumeratorm, int denominator) {
+		StringBuilder result=new StringBuilder();
+		if(denominator<0) return "0";
+	}
+
+}

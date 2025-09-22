@@ -1,0 +1,55 @@
+package gsquestions;
+class ListNode{
+	int val;
+	ListNode next;
+	
+	ListNode(int val){
+		this.val=val;
+		this.next=null;
+	}
+}
+
+public class LinkedListEvenOddNode {
+	
+	public static void main(String[] args) {
+		
+	ListNode head=new ListNode(1);
+	head.next=new ListNode(2);
+	head.next.next=new ListNode(3);
+	head.next.next.next=new ListNode(4);
+	head.next.next.next.next=new ListNode(5);
+	head.next.next.next.next.next=new ListNode(6);
+	head.next.next.next.next.next.next=new ListNode(7);
+	
+	ListNode rearranged=rearrange(head);
+	}
+
+	private static ListNode rearrange(ListNode head) {
+		if(head==null ||head.next==null) return head;
+		ListNode evenHead=null,oddHead=null,evenTail=null,oddTail=null;
+		ListNode current=head;
+		int index=1;
+		
+		while(current!=null) {
+			if(index%2!=0) {
+				if(oddHead==null) {
+					oddHead=oddTail=current;
+				}else {
+					oddTail.next=current;
+					oddTail=oddTail.next;
+				}
+			}else {
+				if(evenHead==null) {
+					evenHead=evenTail=current;
+				}else {
+					evenHead.next=current;
+					evenHead=evenHead.next;
+				}
+				
+			}
+			current=current.next;
+			index++;
+			
+		}
+	}
+}

@@ -1,0 +1,28 @@
+package gsquestions;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class DecimalConversion {
+
+	public static void main(String[] args) {
+		int num=1;
+		int deno=2;
+		FractionalDecimal(num,deno);
+	}
+
+	private static String FractionalDecimal(int num, int deno) {
+		StringBuilder result=new StringBuilder();
+		if((num<0)^(deno<0)) result.append("-");
+		long nume=(long)Math.abs(num);
+		long den=(long)Math.abs(deno);
+		result.append(nume/deno);
+		if(nume==0) return result.toString();
+		result.append(".");
+		while(nume!=0) {
+			Map<Long,Integer>remainderMap=new HashMap<>();
+			
+		}
+	}
+
+}

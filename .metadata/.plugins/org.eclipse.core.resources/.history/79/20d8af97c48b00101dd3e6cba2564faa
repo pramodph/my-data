@@ -1,0 +1,13 @@
+package gsquestions;
+
+import java.util.List;
+
+public class PrimeFactorisation {
+
+	public static void main(String[] args) {
+		int x=60;
+		List<Integer>res=findPrimeFactors(x);
+		
+	}
+
+}

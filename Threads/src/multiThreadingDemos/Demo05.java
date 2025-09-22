@@ -1,0 +1,25 @@
+package multiThreadingDemos;
+class Mythread5 extends Thread{
+	public void run() {
+		for (int i = 0; i <= 10; i++) {
+			System.out.println("I,m Lazy Thread");
+			try {
+				System.out.println("I want to sleep");
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				System.out.println("Child Thread intrupted");
+			}
+		}
+	}
+}
+
+public class Demo05 {
+
+	public static void main(String[] args) {
+		Mythread5 t=new Mythread5();
+		t.start();
+		t.interrupt();
+			System.out.println("End Main thread");
+	}
+
+}

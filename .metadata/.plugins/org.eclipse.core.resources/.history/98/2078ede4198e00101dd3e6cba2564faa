@@ -1,0 +1,29 @@
+package Queue;
+
+import java.util.PriorityQueue;
+
+public class PriorityQueueDemo01 {
+
+	public static void main(String[] args) {
+		// Create a PriorityQueue of Integers
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+        // Add elements
+        pq.add(50);
+        pq.add(10);
+        pq.add(30);
+        pq.add(20);
+        pq.add(40);
+
+        // Print PriorityQueue
+        System.out.println("PriorityQueue elements: " + pq);
+        pq.poll();
+
+        // Poll elements one by one (will come out in ascending order)
+        System.out.println("Polling elements in priority order:");
+        while (!pq.isEmpty()) {
+            System.out.println(pq.poll());
+        }
+	}
+
+}

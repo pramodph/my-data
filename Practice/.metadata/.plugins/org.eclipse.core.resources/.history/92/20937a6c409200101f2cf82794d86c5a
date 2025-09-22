@@ -1,0 +1,5 @@
+package DemoStopResumeSuspend;
+
+public class SharedResource {
+
+}

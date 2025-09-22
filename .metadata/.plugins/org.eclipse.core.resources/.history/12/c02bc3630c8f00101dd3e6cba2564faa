@@ -1,0 +1,20 @@
+package MOdel;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+
+@Entity
+
+public class Employee {
+
+	private Long Id;
+	
+	private String name;
+	
+	private String dept;
+	
+	private Date joiningDate;
+	
+	
+}

@@ -1,0 +1,16 @@
+package gsquestions;
+
+public class JoshephusElimination {
+
+	public static void main(String[] args) {
+		int n=7;
+		int k=3;
+		findTheWinner(n,k);
+	}
+
+	private static void findTheWinner(int n, int k) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

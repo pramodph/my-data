@@ -1,0 +1,33 @@
+package gsquestions;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class FindMissingCharacter {
+
+	public static void main(String[] args) {
+		String sentance="abc";
+		List<Character>res =findMissingChar(sentance);
+		System.out.println(res);
+	}
+
+	private static List<Character> findMissingChar(String sentance) {
+		sentance=sentance.toLowerCase();
+		Set<Character>st=new HashSet<>();
+		for(char ch:sentance.toCharArray()) {
+			if(ch>='a' && ch<='z') {
+				st.add(ch);
+			}
+		}
+		List<Character> lst=new ArrayList<>();
+		for(char i='a';i<='z';i++) {
+			if(!st.contains(i)) {
+				lst.add(i);
+			}
+		}
+		return lst;
+	}
+
+}

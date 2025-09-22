@@ -1,0 +1,24 @@
+package gsquestions;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class FindMissingCharacter {
+
+	public static void main(String[] args) {
+		String sentance="The Quick brown fox jomps over the lazy dog";
+		List<Character>res =findMissingChar(sentance);
+	}
+
+	private static List<Character> findMissingChar(String sentance) {
+		String input=sentance.toLowerCase();
+		Set<Character>st=new HashSet<>();
+		for(char ch:input.toCharArray()) {
+			if(ch>'a' || ch<'z') {
+				st.add(ch);
+			}
+		}
+	}
+
+}

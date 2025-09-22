@@ -1,0 +1,16 @@
+package gsquestions;
+
+public class DecimalConversion {
+
+	public static void main(String[] args) {
+		int num=1;
+		int deno=2;
+		FractionalDecimal(num,deno);
+	}
+
+	private static String FractionalDecimal(int num, int deno) {
+		StringBuilder result=new StringBuilder();
+		if((num<0)^(deno<0)) result.append("-")
+	}
+
+}
